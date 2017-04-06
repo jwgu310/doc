@@ -4,35 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>顾佳伟</title>
-        
     <link rel="stylesheet" type="text/css" href="../../static/css/main.css">
 </head>
 <body>
-<div class="navbar navbar-line">
-    <div class="container">
-        <div class="logo">
-            
-                顾佳伟
-            
-        </div>
-        <input type="checkbox" id="idoc_nav" />
-        <div class="menu_tree">
-        <ul><li><a href="../../index.html">index</a></li><li><a href="#"><span></span>es6</a><ul><li><a href="../../html/es6/es6.html">es6</a></li><li class="active"><a href="../../html/es6/babel.html">babel</a></li></ul></li><li><a href="#"><span></span>git</a><ul><li><a href="../../html/git/Git.html">Git</a></li></ul></li><li><a href="#"><span></span>打包工具</a><ul><li><a href="../../html/打包工具/gulp.html">gulp</a></li><li><a href="../../html/打包工具/webpack.html">webpack</a></li></ul></li><li><a href="#"><span></span>css</a><ul><li><a href="../../html/css/Flex.html">Flex</a></li></ul></li><li><a href="#"><span></span>框架</a><ul><li><a href="../../html/框架/vue.html">vue</a></li><li><a href="../../html/框架/jQuery.html">jQuery</a></li></ul></li></ul>    
-        </div>
+<div class="nav">
+    <div class="logo">
         
+            顾佳伟
         
-
-        <section class="idoc_nav_btn">
-            <label for="idoc_nav"><span></span></label>
-        </section>
     </div>
-    
-</div>
+<ul><li><a href="../../index.html">index</a></li><li><a href="#"><span></span>es6</a><ul><li><a href="../../html/es6/es6.html">es6</a></li><li class="active"><a href="../../html/es6/babel.html">babel</a></li></ul></li><li><a href="#"><span></span>git</a><ul><li><a href="../../html/git/Git.html">Git</a></li></ul></li><li><a href="#"><span></span>打包工具</a><ul><li><a href="../../html/打包工具/gulp.html">gulp</a></li><li><a href="../../html/打包工具/webpack.html">webpack</a></li></ul></li><li><a href="#"><span></span>css</a><ul><li><a href="../../html/css/Flex.html">Flex</a></li></ul></li><li><a href="#"><span></span>框架</a><ul><li><a href="../../html/框架/vue.html">vue</a></li><li><a href="../../html/框架/jQuery.html">jQuery</a></li></ul></li></ul></div>
 
 
-
-
-<div class="container">
+<div class="warpper">
 
     <div class="page-toc">
         <ul><li><a href="#t0Babel是一个通用的多用途JavaScript编译器">Babel是一个通用的多用途JavaScript编译器</a><ul><li><a href="#t1把ES6编译成 ES5">把ES6编译成 ES5</a><ul><li><a href="#t2安装依赖的预设">安装依赖的预设</a></li><li><a href="#t3修改.babelrc">修改.babelrc</a></li></ul></li></ul></li></ul>
@@ -57,31 +41,9 @@
 </code></pre>
         <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
     </div>
-
+    
 </div>
 
 
 </body>
-<script src="http://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
-<script>
-    $('.page-toc li').eq(0).children('a').addClass('red');
-    var arr = [];
-    $("h2,h3").each(function () {
-        $(this).attr('t',$(this).position().top);
-        arr.push($(this).position().top);
-    });
-    $(window).on('scroll', function () {
-        var cur = $(document).scrollTop();
-        for(var i = arr.length; i >=0;i--){
-            if(arr[i]<=cur){
-                break;
-            }
-        }
-        if(i===-1){
-            i = 0;
-        }
-        $('.page-toc li a').removeClass('red');
-        $('.page-toc li').eq(i).children('a').addClass('red')
-    });
-</script>
 </html>

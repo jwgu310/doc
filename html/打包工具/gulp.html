@@ -4,35 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>顾佳伟</title>
-        
     <link rel="stylesheet" type="text/css" href="../../static/css/main.css">
 </head>
 <body>
-<div class="navbar navbar-line">
-    <div class="container">
-        <div class="logo">
-            
-                顾佳伟
-            
-        </div>
-        <input type="checkbox" id="idoc_nav" />
-        <div class="menu_tree">
-        <ul><li><a href="../../index.html">index</a></li><li><a href="#"><span></span>es6</a><ul><li><a href="../../html/es6/es6.html">es6</a></li><li><a href="../../html/es6/babel.html">babel</a></li></ul></li><li><a href="#"><span></span>git</a><ul><li><a href="../../html/git/Git.html">Git</a></li></ul></li><li><a href="#"><span></span>打包工具</a><ul><li class="active"><a href="../../html/打包工具/gulp.html">gulp</a></li><li><a href="../../html/打包工具/webpack.html">webpack</a></li></ul></li><li><a href="#"><span></span>css</a><ul><li><a href="../../html/css/Flex.html">Flex</a></li></ul></li><li><a href="#"><span></span>框架</a><ul><li><a href="../../html/框架/vue.html">vue</a></li><li><a href="../../html/框架/jQuery.html">jQuery</a></li></ul></li></ul>    
-        </div>
+<div class="nav">
+    <div class="logo">
         
+            顾佳伟
         
-
-        <section class="idoc_nav_btn">
-            <label for="idoc_nav"><span></span></label>
-        </section>
     </div>
-    
-</div>
+<ul><li><a href="../../index.html">index</a></li><li><a href="#"><span></span>es6</a><ul><li><a href="../../html/es6/es6.html">es6</a></li><li><a href="../../html/es6/babel.html">babel</a></li></ul></li><li><a href="#"><span></span>git</a><ul><li><a href="../../html/git/Git.html">Git</a></li></ul></li><li><a href="#"><span></span>打包工具</a><ul><li class="active"><a href="../../html/打包工具/gulp.html">gulp</a></li><li><a href="../../html/打包工具/webpack.html">webpack</a></li></ul></li><li><a href="#"><span></span>css</a><ul><li><a href="../../html/css/Flex.html">Flex</a></li></ul></li><li><a href="#"><span></span>框架</a><ul><li><a href="../../html/框架/vue.html">vue</a></li><li><a href="../../html/框架/jQuery.html">jQuery</a></li></ul></li></ul></div>
 
 
-
-
-<div class="container">
+<div class="warpper">
 
     <div class="page-toc">
         <ul><li><a href="#t01. 什么是gulp">1. 什么是gulp</a></li><li><a href="#t12. gulp特点">2. gulp特点</a></li><li><a href="#t23. 流">3. 流</a><ul><li><a href="#t33.1 流的概念">3.1 流的概念</a></li><li><a href="#t43.2 gulp中的流">3.2 gulp中的流</a></li></ul></li><li><a href="#t53. 安装gulp">3. 安装gulp</a><ul><li><a href="#t65.1 安装node">5.1 安装node</a></li><li><a href="#t75.2 gulp 命令行工具">5.2 gulp 命令行工具</a></li><li><a href="#t85.3 gulp本地安装">5.3 gulp本地安装</a></li></ul></li><li><a href="#t94. 安装gulp">4. 安装gulp</a></li><li><a href="#t105. 运行gulp">5. 运行gulp</a><ul><li><a href="#t115.1 创建配置文件">5.1 创建配置文件</a></li><li><a href="#t125.2 创建gulp的任务">5.2 创建gulp的任务</a></li><li><a href="#t135.3 执行gulp任务">5.3 执行gulp任务</a></li><li><a href="#t145.4 执行其它任务">5.4 执行其它任务</a></li></ul></li><li><a href="#t156. gulp参数">6. gulp参数</a></li><li><a href="#t167. gulp.js工作方式">7. gulp.js工作方式</a></li><li><a href="#t178. gulp核心API">8. gulp核心API</a><ul><li><a href="#t188.1 gulp.src()">8.1 gulp.src()</a></li><li><a href="#t198.2 glob语法">8.2 glob语法</a><ul><li><a href="#t208.2.1 glob规则">8.2.1 glob规则</a></li><li><a href="#t218.2.2 glob示例">8.2.2 glob示例</a></li></ul></li><li><a href="#t228.3 gulp.dest()">8.3 gulp.dest()</a></li><li><a href="#t238.4 gulp.task()">8.4 gulp.task()</a></li></ul></li><li><a href="#t248.5 gulp.watch()">8.5 gulp.watch()</a></li><li><a href="#t259.基本任务">9.基本任务</a><ul><li><a href="#t269.1 复制单个文件">9.1 复制单个文件</a></li><li><a href="#t279.2 复制多个文件">9.2 复制多个文件</a></li><li><a href="#t289.3 组合任务">9.3 组合任务</a></li><li><a href="#t299.4 监听任务">9.4 监听任务</a></li></ul></li><li><a href="#t3010. gulp插件">10. gulp插件</a><ul><li><a href="#t3110.1 使用插件步骤">10.1 使用插件步骤</a></li><li><a href="#t3210.2  gulp-load-plugins">10.2  gulp-load-plugins</a></li><li><a href="#t3310.3  less">10.3  less</a></li><li><a href="#t3410.4 gulp-concat">10.4 gulp-concat</a></li><li><a href="#t3510.5  gulp-uglify">10.5  gulp-uglify</a></li><li><a href="#t3610.6  gulp-rename">10.6  gulp-rename</a></li><li><a href="#t3710.7  gulp-minify-css">10.7  gulp-minify-css</a></li><li><a href="#t3810.8  gulp-minify-html">10.8  gulp-minify-html</a></li><li><a href="#t3910.9  gulp-imagemin">10.9  gulp-imagemin</a></li><li><a href="#t4010.10 gulp-connect">10.10 gulp-connect</a></li><li><a href="#t4110.11 自动刷新">10.11 自动刷新</a></li><li><a href="#t4210.12 jshint">10.12 jshint</a></li></ul></li><li><a href="#t4311 gulp.js 特点">11 gulp.js 特点</a></li><li><a href="#t4412 学习建议">12 学习建议</a></li><li><a href="#t4513 项目实战">13 项目实战</a><ul><li><a href="#t4613.1 安装生成器gulp-webapp">13.1 安装生成器gulp-webapp</a></li><li><a href="#t4713.2 生成项目">13.2 生成项目</a></li><li><a href="#t4813.3 阅读gulpfile.js文件">13.3 阅读gulpfile.js文件</a></li></ul></li><li><a href="#t4914 自定义插件">14 自定义插件</a><ul><li><a href="#t5014.1 vinyl">14.1 vinyl</a></li><li><a href="#t5114.2 through2">14.2 through2</a></li><li><a href="#t5214.3 buffer往头部增加内容插件">14.3 buffer往头部增加内容插件</a></li><li><a href="#t5314.4 stream往头部增加内容插件">14.4 stream往头部增加内容插件</a></li></ul></li></ul>
@@ -1041,31 +1025,9 @@ gulp.src(<span class="hljs-string">&apos;files/**/*.js&apos;</span>, { <span cla
 
         <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
     </div>
-
+    
 </div>
 
 
 </body>
-<script src="http://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
-<script>
-    $('.page-toc li').eq(0).children('a').addClass('red');
-    var arr = [];
-    $("h2,h3").each(function () {
-        $(this).attr('t',$(this).position().top);
-        arr.push($(this).position().top);
-    });
-    $(window).on('scroll', function () {
-        var cur = $(document).scrollTop();
-        for(var i = arr.length; i >=0;i--){
-            if(arr[i]<=cur){
-                break;
-            }
-        }
-        if(i===-1){
-            i = 0;
-        }
-        $('.page-toc li a').removeClass('red');
-        $('.page-toc li').eq(i).children('a').addClass('red')
-    });
-</script>
 </html>
