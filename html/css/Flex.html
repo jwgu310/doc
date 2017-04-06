@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>顾佳伟</title>
+        
+    <link rel="stylesheet" type="text/css" href="../../static/css/main.css">
+</head>
+<body>
+<div class="navbar navbar-line">
+    <div class="container">
+        <div class="logo">
+            
+                顾佳伟
+            
+        </div>
+        <input type="checkbox" id="idoc_nav" />
+        <div class="menu_tree">
+        <ul><li><a href="../../index.html">index</a></li><li><a href="#"><span></span>es6</a><ul><li><a href="../../html/es6/es6.html">es6</a></li><li><a href="../../html/es6/babel.html">babel</a></li></ul></li><li><a href="#"><span></span>git</a><ul><li><a href="../../html/git/Git.html">Git</a></li></ul></li><li><a href="#"><span></span>打包工具</a><ul><li><a href="../../html/打包工具/gulp.html">gulp</a></li><li><a href="../../html/打包工具/webpack.html">webpack</a></li></ul></li><li><a href="#"><span></span>css</a><ul><li class="active"><a href="../../html/css/Flex.html">Flex</a></li></ul></li><li><a href="#"><span></span>框架</a><ul><li><a href="../../html/框架/vue.html">vue</a></li><li><a href="../../html/框架/jQuery.html">jQuery</a></li></ul></li></ul>    
+        </div>
+        
+        
+
+        <section class="idoc_nav_btn">
+            <label for="idoc_nav"><span></span></label>
+        </section>
+    </div>
+    
+</div>
+
+
+
+
+<div class="container">
+
+    <div class="page-toc">
+        <ul><li><a href="#t0Flex布局">Flex布局</a><ul><li><a href="#t1弹性盒子模型">弹性盒子模型</a></li><li><a href="#t2使用flex水平垂直居中">使用flex水平垂直居中</a></li><li><a href="#t3容器的属性">容器的属性</a></li><li><a href="#t4项目的属性">项目的属性</a><ul><li><a href="#t5实现三栏布局">实现三栏布局</a><ul><li><a href="#t6给父容器添加属性">给父容器添加属性</a></li><li><a href="#t7子容器要给高度">子容器要给高度</a></li></ul></li></ul></li></ul></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h1 id="t0Flex&#x5E03;&#x5C40;">Flex&#x5E03;&#x5C40; <a href="#t0Flex&#x5E03;&#x5C40;"> # </a></h1>
+<h2 id="t1&#x5F39;&#x6027;&#x76D2;&#x5B50;&#x6A21;&#x578B;">&#x5F39;&#x6027;&#x76D2;&#x5B50;&#x6A21;&#x578B; <a href="#t1&#x5F39;&#x6027;&#x76D2;&#x5B50;&#x6A21;&#x578B;"> # </a></h2>
+<ul>
+<li>&#x91C7;&#x7528;Flex&#x5E03;&#x5C40;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x79F0;&#x4E3A;Flex&#x5BB9;&#x5668;&#xFF08;flex container&#xFF09;&#xFF0C;&#x7B80;&#x79F0;&quot;&#x5BB9;&#x5668;&quot;&#x3002;</li>
+<li>&#x5B83;&#x7684;&#x6240;&#x6709;&#x5B50;&#x5143;&#x7D20;&#x81EA;&#x52A8;&#x6210;&#x4E3A;&#x5BB9;&#x5668;&#x6210;&#x5458;&#xFF0C;&#x79F0;&#x4E3A;Flex&#x9879;&#x76EE;&#xFF08;flex item&#xFF09;&#xFF0C;&#x7B80;&#x79F0;&quot;&#x9879;&#x76EE;&quot;&#x3002;</li>
+</ul>
+<blockquote>
+<p>&#x5BB9;&#x5668;&#x9ED8;&#x8BA4;&#x5B58;&#x5728;&#x4E24;&#x6839;&#x8F74;&#xFF1A;&#x6C34;&#x5E73;&#x7684;&#x4E3B;&#x8F74;&#xFF08;main axis&#xFF09;&#x548C;&#x5782;&#x76F4;&#x7684;&#x4EA4;&#x53C9;&#x8F74;&#xFF08;cross axis&#xFF09;&#x3002;
+&#x4E3B;&#x8F74;&#x7684;&#x5F00;&#x59CB;&#x4F4D;&#x7F6E;&#xFF08;&#x4E0E;&#x8FB9;&#x6846;&#x7684;&#x4EA4;&#x53C9;&#x70B9;&#xFF09;&#x53EB;&#x505A;main start&#xFF0C;&#x7ED3;&#x675F;&#x4F4D;&#x7F6E;&#x53EB;&#x505A;main end&#xFF1B;
+&#x4EA4;&#x53C9;&#x8F74;&#x7684;&#x5F00;&#x59CB;&#x4F4D;&#x7F6E;&#x53EB;&#x505A;cross start&#xFF0C;&#x7ED3;&#x675F;&#x4F4D;&#x7F6E;&#x53EB;&#x505A;cross end&#x3002;
+&#x9879;&#x76EE;&#x9ED8;&#x8BA4;&#x6CBF;&#x4E3B;&#x8F74;&#x6392;&#x5217;&#x3002;&#x5355;&#x4E2A;&#x9879;&#x76EE;&#x5360;&#x636E;&#x7684;&#x4E3B;&#x8F74;&#x7A7A;&#x95F4;&#x53EB;&#x505A;main size&#xFF0C;&#x5360;&#x636E;&#x7684;&#x4EA4;&#x53C9;&#x8F74;&#x7A7A;&#x95F4;&#x53EB;&#x505A;cross size&#x3002;</p>
+</blockquote>
+<h2 id="t2&#x4F7F;&#x7528;flex&#x6C34;&#x5E73;&#x5782;&#x76F4;&#x5C45;&#x4E2D;">&#x4F7F;&#x7528;flex&#x6C34;&#x5E73;&#x5782;&#x76F4;&#x5C45;&#x4E2D; <a href="#t2&#x4F7F;&#x7528;flex&#x6C34;&#x5E73;&#x5782;&#x76F4;&#x5C45;&#x4E2D;"> # </a></h2>
+<ul>
+<li>&#x7ED9;&#x7236;&#x5BB9;&#x5668;&#x8BBE;&#x7F6E;&#x5982;&#x4E0B;&#x5C5E;&#x6027;</li>
+</ul>
+<pre><code>  display: flex;
+  flex-flow:row wrap;/*flex-direction&#x548C;flex-wrap&#x7684;&#x590D;&#x5408;&#x5199;&#x6CD5;*/
+  justify-content: center;
+  align-items:center;
+</code></pre><hr>
+<h2 id="t3&#x5BB9;&#x5668;&#x7684;&#x5C5E;&#x6027;">&#x5BB9;&#x5668;&#x7684;&#x5C5E;&#x6027; <a href="#t3&#x5BB9;&#x5668;&#x7684;&#x5C5E;&#x6027;"> # </a></h2>
+<pre><code>flex-direction:&#x5C5E;&#x6027;&#x51B3;&#x5B9A;&#x4E3B;&#x8F74;&#x7684;&#x65B9;&#x5411;&#xFF08;&#x5373;&#x9879;&#x76EE;&#x7684;&#x6392;&#x5217;&#x65B9;&#x5411;&#xFF09;
+&#x503C;&#xFF1A;row | row-reverse | column | column-reverse;
+
+flex-wrap:&#x5982;&#x679C;&#x4E00;&#x6761;&#x8F74;&#x7EBF;&#x6392;&#x4E0D;&#x4E0B;&#xFF0C;&#x5982;&#x4F55;&#x6362;&#x884C;
+&#x503C;&#xFF1A;nowrap | wrap | wrap-reverse;
+
+flex-flow&#xFF1A;&#x5C5E;&#x6027;&#x662F;flex-direction&#x5C5E;&#x6027;&#x548C;flex-wrap&#x5C5E;&#x6027;&#x7684;&#x7B80;&#x5199;&#x5F62;&#x5F0F;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;row nowrap
+&#x503C;&#xFF1A;&lt;flex-direction&gt; || &lt;flex-wrap&gt;;
+
+justify-content&#xFF1A;&#x5C5E;&#x6027;&#x5B9A;&#x4E49;&#x4E86;&#x9879;&#x76EE;&#x5728;&#x4E3B;&#x8F74;&#x4E0A;&#x7684;&#x5BF9;&#x9F50;&#x65B9;&#x5F0F;&#x3002;
+&#x503C;&#xFF1A;flex-start | flex-end | center | space-between | space-around;
+
+align-items&#xFF1A;&#x5C5E;&#x6027;&#x5B9A;&#x4E49;&#x9879;&#x76EE;&#x5728;&#x4EA4;&#x53C9;&#x8F74;&#x4E0A;&#x5982;&#x4F55;&#x5BF9;&#x9F50;&#x3002;
+&#x503C;&#xFF1A; flex-start | flex-end | center | baseline | stretch;
+
+align-content&#xFF1A;&#x5C5E;&#x6027;&#x5B9A;&#x4E49;&#x4E86;&#x591A;&#x6839;&#x8F74;&#x7EBF;&#x7684;&#x5BF9;&#x9F50;&#x65B9;&#x5F0F;&#x3002;&#x5982;&#x679C;&#x9879;&#x76EE;&#x53EA;&#x6709;&#x4E00;&#x6839;&#x8F74;&#x7EBF;&#xFF0C;&#x8BE5;&#x5C5E;&#x6027;&#x4E0D;&#x8D77;&#x4F5C;&#x7528;&#x3002;
+&#x503C;&#xFF1A; flex-start | flex-end | center | space-between | space-around | stretch;
+</code></pre><hr>
+<h2 id="t4&#x9879;&#x76EE;&#x7684;&#x5C5E;&#x6027;">&#x9879;&#x76EE;&#x7684;&#x5C5E;&#x6027; <a href="#t4&#x9879;&#x76EE;&#x7684;&#x5C5E;&#x6027;"> # </a></h2>
+<pre><code>order:&#x5C5E;&#x6027;&#x5B9A;&#x4E49;&#x9879;&#x76EE;&#x7684;&#x6392;&#x5217;&#x987A;&#x5E8F;&#x3002;&#x6570;&#x503C;&#x8D8A;&#x5C0F;&#xFF0C;&#x6392;&#x5217;&#x8D8A;&#x9760;&#x524D;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;0&#x3002;
+
+flex-grow:&#x5C5E;&#x6027;&#x5B9A;&#x4E49;&#x9879;&#x76EE;&#x7684;&#x653E;&#x5927;&#x6BD4;&#x4F8B;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;0&#xFF0C;&#x5373;&#x5982;&#x679C;&#x5B58;&#x5728;&#x5269;&#x4F59;&#x7A7A;&#x95F4;&#xFF0C;&#x4E5F;&#x4E0D;&#x653E;&#x5927;&#x3002;
+
+flex-shrink:&#x5C5E;&#x6027;&#x5B9A;&#x4E49;&#x4E86;&#x9879;&#x76EE;&#x7684;&#x7F29;&#x5C0F;&#x6BD4;&#x4F8B;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;1&#xFF0C;&#x5373;&#x5982;&#x679C;&#x7A7A;&#x95F4;&#x4E0D;&#x8DB3;&#xFF0C;&#x8BE5;&#x9879;&#x76EE;&#x5C06;&#x7F29;&#x5C0F;&#x3002;
+
+flex-basis:&#x5C5E;&#x6027;&#x5B9A;&#x4E49;&#x4E86;&#x5728;&#x5206;&#x914D;&#x591A;&#x4F59;&#x7A7A;&#x95F4;&#x4E4B;&#x524D;&#xFF0C;&#x9879;&#x76EE;&#x5360;&#x636E;&#x7684;&#x4E3B;&#x8F74;&#x7A7A;&#x95F4;&#xFF08;main size&#xFF09;&#x3002;
+&#x6D4F;&#x89C8;&#x5668;&#x6839;&#x636E;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#xFF0C;&#x8BA1;&#x7B97;&#x4E3B;&#x8F74;&#x662F;&#x5426;&#x6709;&#x591A;&#x4F59;&#x7A7A;&#x95F4;&#x3002;&#x5B83;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;auto&#xFF0C;&#x5373;&#x9879;&#x76EE;&#x7684;&#x672C;&#x6765;&#x5927;&#x5C0F;&#x3002;
+
+flex&#x5C5E;&#x6027;&#x662F;flex-grow, flex-shrink &#x548C; flex-basis&#x7684;&#x7B80;&#x5199;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;0 1 auto&#x3002;&#x540E;&#x4E24;&#x4E2A;&#x5C5E;&#x6027;&#x53EF;&#x9009;&#x3002;
+&#x8BE5;&#x5C5E;&#x6027;&#x6709;&#x4E24;&#x4E2A;&#x5FEB;&#x6377;&#x503C;&#xFF1A;auto (1 1 auto) &#x548C; none (0 0 auto)&#x3002;
+
+align-self&#x5C5E;&#x6027;&#x5141;&#x8BB8;&#x5355;&#x4E2A;&#x9879;&#x76EE;&#x6709;&#x4E0E;&#x5176;&#x4ED6;&#x9879;&#x76EE;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#x5BF9;&#x9F50;&#x65B9;&#x5F0F;&#xFF0C;&#x53EF;&#x8986;&#x76D6;align-items&#x5C5E;&#x6027;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;auto&#xFF0C;&#x8868;&#x793A;&#x7EE7;&#x627F;&#x7236;&#x5143;&#x7D20;&#x7684;align-items&#x5C5E;&#x6027;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x7236;&#x5143;&#x7D20;&#xFF0C;&#x5219;&#x7B49;&#x540C;&#x4E8E;stretch&#x3002;
+&#x503C;&#xFF1A;auto | flex-start | flex-end | center | baseline | stretch;
+</code></pre><hr>
+<h3 id="t5&#x5B9E;&#x73B0;&#x4E09;&#x680F;&#x5E03;&#x5C40;">&#x5B9E;&#x73B0;&#x4E09;&#x680F;&#x5E03;&#x5C40; <a href="#t5&#x5B9E;&#x73B0;&#x4E09;&#x680F;&#x5E03;&#x5C40;"> # </a></h3>
+<h4 id="t6&#x7ED9;&#x7236;&#x5BB9;&#x5668;&#x6DFB;&#x52A0;&#x5C5E;&#x6027;">&#x7ED9;&#x7236;&#x5BB9;&#x5668;&#x6DFB;&#x52A0;&#x5C5E;&#x6027; <a href="#t6&#x7ED9;&#x7236;&#x5BB9;&#x5668;&#x6DFB;&#x52A0;&#x5C5E;&#x6027;"> # </a></h4>
+<pre><code>   .wrap{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .wrap &gt;*{
+            flex:1 100%;
+            height: 100px;
+        }
+</code></pre><h4 id="t7&#x5B50;&#x5BB9;&#x5668;&#x8981;&#x7ED9;&#x9AD8;&#x5EA6;">&#x5B50;&#x5BB9;&#x5668;&#x8981;&#x7ED9;&#x9AD8;&#x5EA6; <a href="#t7&#x5B50;&#x5BB9;&#x5668;&#x8981;&#x7ED9;&#x9AD8;&#x5EA6;"> # </a></h4>
+<pre><code>        @media all and (min-width: 600px) {
+            .aside{
+              flex:1  auto;
+              height: 200px;
+            }
+        }
+        @media all and (min-width: 800px) {
+            .main{
+              flex:2  auto;
+            }
+            .aside-1{
+                order: -1;
+            }
+            .header{
+                order: -2;
+            }
+        }
+</code></pre>
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+
+</div>
+
+
+</body>
+<script src="http://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+<script>
+    $('.page-toc li').eq(0).children('a').addClass('red');
+    var arr = [];
+    $("h2,h3").each(function () {
+        $(this).attr('t',$(this).position().top);
+        arr.push($(this).position().top);
+    });
+    $(window).on('scroll', function () {
+        var cur = $(document).scrollTop();
+        for(var i = arr.length; i >=0;i--){
+            if(arr[i]<=cur){
+                break;
+            }
+        }
+        if(i===-1){
+            i = 0;
+        }
+        $('.page-toc li a').removeClass('red');
+        $('.page-toc li').eq(i).children('a').addClass('red')
+    });
+</script>
+</html>
