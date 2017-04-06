@@ -23,11 +23,6 @@
                 ]
             },
             {
-                "git": [
-                    "Git.md"
-                ]
-            },
-            {
                 "打包工具": [
                     "gulp.md",
                     "webpack.md"
