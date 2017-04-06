@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jiawei</title>
+        
+    <link rel="stylesheet" type="text/css" href="../../static/css/main.css">
+</head>
+<body>
+<div class="navbar navbar-line">
+    <div class="container">
+        <div class="logo">
+            
+                jiawei
+            
+        </div>
+        <input type="checkbox" id="idoc_nav" />
+        <div class="menu_tree">
+        <ul><li><a href="../../index.html">Git</a></li><li><a href="../../html/index.html">index</a></li><li><a href="#"><span></span>es6</a><ul><li><a href="../../html/es6/es6.html">es6</a></li><li class="active"><a href="../../html/es6/babel.html">babel</a></li></ul></li></ul>    
+        </div>
+        
+        
+
+        <section class="idoc_nav_btn">
+            <label for="idoc_nav"><span></span></label>
+        </section>
+    </div>
+    
+</div>
+
+
+
+
+<div class="container">
+
+    <div class="page-toc">
+        <ul><li><a href="#t0tags: 2017年04月">tags: 2017年04月</a></li><li><a href="#t1Babel是一个通用的多用途JavaScript编译器">Babel是一个通用的多用途JavaScript编译器</a><ul><li><a href="#t2把ES6编译成 ES5">把ES6编译成 ES5</a><ul><li><a href="#t3安装依赖的预设">安装依赖的预设</a></li><li><a href="#t4修改.babelrc">修改.babelrc</a></li></ul></li></ul></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <hr>
+<p>title: Babel&#x7684;&#x64CD;&#x4F5C;&#x6307;&#x5357;
+date: 2017-04-06 18:36:31</p>
+<h2 id="t0tags: 2017&#x5E74;04&#x6708;">tags: 2017&#x5E74;04&#x6708; <a href="#t0tags: 2017&#x5E74;04&#x6708;"> # </a></h2>
+<h1 id="t1Babel&#x662F;&#x4E00;&#x4E2A;&#x901A;&#x7528;&#x7684;&#x591A;&#x7528;&#x9014;JavaScript&#x7F16;&#x8BD1;&#x5668;">Babel&#x662F;&#x4E00;&#x4E2A;&#x901A;&#x7528;&#x7684;&#x591A;&#x7528;&#x9014;JavaScript&#x7F16;&#x8BD1;&#x5668; <a href="#t1Babel&#x662F;&#x4E00;&#x4E2A;&#x901A;&#x7528;&#x7684;&#x591A;&#x7528;&#x9014;JavaScript&#x7F16;&#x8BD1;&#x5668;"> # </a></h1>
+<pre><code>npm install babel-cli -g  
+</code></pre><h2 id="t2&#x628A;ES6&#x7F16;&#x8BD1;&#x6210; ES5">&#x628A;ES6&#x7F16;&#x8BD1;&#x6210; ES5 <a href="#t2&#x628A;ES6&#x7F16;&#x8BD1;&#x6210; ES5"> # </a></h2>
+<h3 id="t3&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x7684;&#x9884;&#x8BBE;">&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x7684;&#x9884;&#x8BBE; <a href="#t3&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x7684;&#x9884;&#x8BBE;"> # </a></h3>
+<pre><code>$ npm install --save-dev babel-preset-es2015
+</code></pre><h3 id="t4&#x4FEE;&#x6539;.babelrc">&#x4FEE;&#x6539;.babelrc <a href="#t4&#x4FEE;&#x6539;.babelrc"> # </a></h3>
+<pre><code>{
+    &quot;presets&quot;: [&quot;es2015&quot;]
+}
+</code></pre><hr>
+<pre><code>$ babel es6.js  &#x8FD9;&#x5C06;&#x628A;&#x7F16;&#x8BD1;&#x540E;&#x7684;&#x7ED3;&#x679C;&#x76F4;&#x63A5;&#x8F93;&#x51FA;&#x81F3;&#x7EC8;&#x7AEF;
+</code></pre><hr>
+<pre><code>$ babel es6.js -o es5.js  &#x52A0;&#x4E0A;-o&#x53C2;&#x6570; &#x53EF;&#x4EE5;&#x5C06;&#x7ED3;&#x679C;&#x5199;&#x5165;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x6587;&#x4EF6;
+</code></pre><hr>
+<pre><code>$ babel src -d lib &#x628A;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#x6574;&#x4E2A;&#x7F16;&#x8BD1;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x76EE;&#x5F55;
+</code></pre>
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+
+</div>
+
+
+</body>
+<script src="http://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+<script>
+    $('.page-toc li').eq(0).children('a').addClass('red');
+    var arr = [];
+    $("h2,h3").each(function () {
+        $(this).attr('t',$(this).position().top);
+        arr.push($(this).position().top);
+    });
+    $(window).on('scroll', function () {
+        var cur = $(document).scrollTop();
+        for(var i = arr.length; i >=0;i--){
+            if(arr[i]<=cur){
+                break;
+            }
+        }
+        if(i===-1){
+            i = 0;
+        }
+        $('.page-toc li a').removeClass('red');
+        $('.page-toc li').eq(i).children('a').addClass('red')
+    });
+</script>
+</html>

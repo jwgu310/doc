@@ -1,0 +1,28 @@
+{
+    "name": "jiawei",
+    "version": "1.0.0",
+    "description": "",
+    "keywords": [
+        ""
+    ],
+    "homepage": "http://JSLite.io",
+    "author": "jwgu310 <13051301207@163.com>",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "licenses": "MIT",
+    "idoc": {
+        "theme": "doc",
+        "md": [
+            "Git.md",
+            "index.md",
+            {
+                "es6": [
+                    "es6.md",
+                    "babel.md"
+                ]
+            }
+        ]
+    }
+}

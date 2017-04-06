@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jiawei</title>
+        
+    <link rel="stylesheet" type="text/css" href="../../static/css/main.css">
+</head>
+<body>
+<div class="navbar navbar-line">
+    <div class="container">
+        <div class="logo">
+            
+                jiawei
+            
+        </div>
+        <input type="checkbox" id="idoc_nav" />
+        <div class="menu_tree">
+        <ul><li><a href="../../index.html">Git</a></li><li><a href="../../html/index.html">index</a></li><li><a href="#"><span></span>es6</a><ul><li class="active"><a href="../../html/es6/es6.html">es6</a></li><li><a href="../../html/es6/babel.html">babel</a></li></ul></li></ul>    
+        </div>
+        
+        
+
+        <section class="idoc_nav_btn">
+            <label for="idoc_nav"><span></span></label>
+        </section>
+    </div>
+    
+</div>
+
+
+
+
+<div class="container">
+
+    <div class="page-toc">
+        <ul><li><a href="#t0tags: 2017年04月">tags: 2017年04月</a></li><li><a href="#t1ES6">ES6</a><ul><li><a href="#t2块级作用域">块级作用域</a></li><li><a href="#t3常量const  常量一旦赋值就不能再修改了">常量const  常量一旦赋值就不能再修改了</a></li><li><a href="#t4模板字符串">模板字符串</a></li><li><a href="#t5剩余操作符">剩余操作符</a></li><li><a href="#t6箭头函数">箭头函数</a></li></ul></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <hr>
+<p>title: ES6&#x7684;&#x4F7F;&#x7528;
+date: 2017-04-06 19:02:31</p>
+<h2 id="t0tags: 2017&#x5E74;04&#x6708;">tags: 2017&#x5E74;04&#x6708; <a href="#t0tags: 2017&#x5E74;04&#x6708;"> # </a></h2>
+<h1 id="t1ES6">ES6 <a href="#t1ES6"> # </a></h1>
+<h2 id="t2&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;">&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF; <a href="#t2&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;"> # </a></h2>
+<p>&#x4F7F;&#x7528; let &#x5B9A;&#x4E49;&#x7684;&#x53D8;&#x91CF;&#x5728;&#x5927;&#x62EC;&#x53F7;&#x7684;&#x5916;&#x9762;&#x662F;&#x8BBF;&#x95EE;&#x4E0D;&#x5230;&#x7684;</p>
+<h2 id="t3&#x5E38;&#x91CF;const  &#x5E38;&#x91CF;&#x4E00;&#x65E6;&#x8D4B;&#x503C;&#x5C31;&#x4E0D;&#x80FD;&#x518D;&#x4FEE;&#x6539;&#x4E86;">&#x5E38;&#x91CF;const  &#x5E38;&#x91CF;&#x4E00;&#x65E6;&#x8D4B;&#x503C;&#x5C31;&#x4E0D;&#x80FD;&#x518D;&#x4FEE;&#x6539;&#x4E86; <a href="#t3&#x5E38;&#x91CF;const  &#x5E38;&#x91CF;&#x4E00;&#x65E6;&#x8D4B;&#x503C;&#x5C31;&#x4E0D;&#x80FD;&#x518D;&#x4FEE;&#x6539;&#x4E86;"> # </a></h2>
+<p>&#x6CE8;&#x610F;const&#x9650;&#x5236;&#x7684;&#x662F;&#x4E0D;&#x80FD;&#x7ED9;&#x53D8;&#x91CF;&#x91CD;&#x65B0;&#x8D4B;&#x503C;&#xFF0C;&#x800C;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x672C;&#x8EAB;&#x662F;&#x53EF;&#x4EE5;&#x6539;&#x53D8;&#x7684;,&#x4E0B;&#x9762;&#x7684;&#x64CD;&#x4F5C;&#x662F;&#x53EF;&#x4EE5;&#x7684;</p>
+<h2 id="t4&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32;">&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32; <a href="#t4&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32;"> # </a></h2>
+<pre><code>let desc = `${name} is ${age} old!`;
+</code></pre><h2 id="t5&#x5269;&#x4F59;&#x64CD;&#x4F5C;&#x7B26;">&#x5269;&#x4F59;&#x64CD;&#x4F5C;&#x7B26; <a href="#t5&#x5269;&#x4F59;&#x64CD;&#x4F5C;&#x7B26;"> # </a></h2>
+<p>   &#x5269;&#x4F59;&#x64CD;&#x4F5C;&#x7B26;&#x53EF;&#x4EE5;&#x628A;&#x5176;&#x4F59;&#x7684;&#x53C2;&#x6570;&#x7684;&#x503C;&#x90FD;&#x653E;&#x5230;&#x4E00;&#x4E2A;&#x53EB;b&#x7684;&#x6570;&#x7EC4;&#x91CC;&#x9762;</p>
+<pre><code>   let rest = function(a,...b){
+   console.log(a,b);
+  }
+   rest(1,2,3);    
+</code></pre><h2 id="t6&#x7BAD;&#x5934;&#x51FD;&#x6570;">&#x7BAD;&#x5934;&#x51FD;&#x6570; <a href="#t6&#x7BAD;&#x5934;&#x51FD;&#x6570;"> # </a></h2>
+<p>   &#x7BAD;&#x5934;&#x51FD;&#x6570;&#x7B80;&#x5316;&#x4E86;&#x51FD;&#x6570;&#x7684;&#x7684;&#x5B9A;&#x4E49;&#x65B9;&#x5F0F;&#xFF0C;&#x4E00;&#x822C;&#x4EE5; &quot;=&gt;&quot; &#x64CD;&#x4F5C;&#x7B26;&#x5DE6;&#x8FB9;&#x4E3A;&#x8F93;&#x5165;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x800C;&#x53F3;&#x8FB9;&#x5219;&#x662F;&#x8FDB;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#x4EE5;&#x53CA;&#x8FD4;&#x56DE;&#x7684;&#x503C;inputs=&gt;output</p>
+<pre><code>  [1,2,3].forEach(val =&gt; console.log(val)););
+</code></pre><p>   &#x8F93;&#x5165;&#x53C2;&#x6570;&#x5982;&#x679C;&#x591A;&#x4E8E;&#x4E00;&#x4E2A;&#x8981;&#x7528;()&#x5305;&#x8D77;&#x6765;&#xFF0C;&#x51FD;&#x6570;&#x4F53;&#x5982;&#x679C;&#x6709;&#x591A;&#x6761;&#x8BED;&#x53E5;&#x9700;&#x8981;&#x7528;{}&#x5305;&#x8D77;&#x6765;
+   &#x7BAD;&#x5934;&#x51FD;&#x6570;&#x6839;&#x672C;&#x6CA1;&#x6709;&#x81EA;&#x5DF1;&#x7684;this&#xFF0C;&#x5BFC;&#x81F4;&#x5185;&#x90E8;&#x7684;this&#x5C31;&#x662F;&#x5916;&#x5C42;&#x4EE3;&#x7801;&#x5757;&#x7684;this&#x3002; &#x6B63;&#x662F;&#x56E0;&#x4E3A;&#x5B83;&#x6CA1;&#x6709;this&#xFF0C;&#x4ECE;&#x800C;&#x907F;&#x514D;&#x4E86;this&#x6307;&#x5411;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+
+</div>
+
+
+</body>
+<script src="http://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+<script>
+    $('.page-toc li').eq(0).children('a').addClass('red');
+    var arr = [];
+    $("h2,h3").each(function () {
+        $(this).attr('t',$(this).position().top);
+        arr.push($(this).position().top);
+    });
+    $(window).on('scroll', function () {
+        var cur = $(document).scrollTop();
+        for(var i = arr.length; i >=0;i--){
+            if(arr[i]<=cur){
+                break;
+            }
+        }
+        if(i===-1){
+            i = 0;
+        }
+        $('.page-toc li a').removeClass('red');
+        $('.page-toc li').eq(i).children('a').addClass('red')
+    });
+</script>
+</html>
