@@ -1,5 +1,5 @@
 {
-    "name": "jiawei",
+    "name": "顾佳伟",
     "version": "1.0.0",
     "description": "",
     "keywords": [
@@ -15,12 +15,33 @@
     "idoc": {
         "theme": "doc",
         "md": [
-            "Git.md",
             "index.md",
             {
                 "es6": [
                     "es6.md",
                     "babel.md"
+                ]
+            },
+            {
+                "git": [
+                    "Git.md"
+                ]
+            },
+            {
+                "打包工具": [
+                    "gulp.md",
+                    "webpack.md"
+                ]
+            },
+            {
+                "css": [
+                    "Flex.md"
+                ]
+            },
+            {
+                "框架": [
+                    "vue.md",
+                    "jQuery.md"
                 ]
             }
         ]

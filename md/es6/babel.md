@@ -1,8 +1,4 @@
----
-title: Babel的操作指南
-date: 2017-04-06 18:36:31
-tags: 2017年04月
----
+
 
 # Babel是一个通用的多用途JavaScript编译器
 
