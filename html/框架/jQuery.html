@@ -4,19 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>顾佳伟</title>
+        
     <link rel="stylesheet" type="text/css" href="../../static/css/main.css">
 </head>
 <body>
-<div class="nav">
-    <div class="logo">
+<div class="navbar navbar-line">
+    <div class="container">
+        <div class="logo">
+            
+                顾佳伟
+            
+        </div>
+        <input type="checkbox" id="idoc_nav" />
+        <div class="menu_tree">
+        <ul><li><a href="../../index.html">index</a></li><li><a href="#"><span></span>es6</a><ul><li><a href="../../html/es6/es6.html">es6</a></li><li><a href="../../html/es6/babel.html">babel</a></li></ul></li><li><a href="#"><span></span>git</a><ul><li><a href="../../html/git/Git.html">Git</a></li></ul></li><li><a href="#"><span></span>打包工具</a><ul><li><a href="../../html/打包工具/gulp.html">gulp</a></li><li><a href="../../html/打包工具/webpack.html">webpack</a></li></ul></li><li><a href="#"><span></span>css</a><ul><li><a href="../../html/css/Flex.html">Flex</a></li></ul></li><li><a href="#"><span></span>框架</a><ul><li><a href="../../html/框架/vue.html">vue</a></li><li class="active"><a href="../../html/框架/jQuery.html">jQuery</a></li></ul></li></ul>    
+        </div>
         
-            顾佳伟
         
+
+        <section class="idoc_nav_btn">
+            <label for="idoc_nav"><span></span></label>
+        </section>
     </div>
-<ul><li><a href="../../index.html">index</a></li><li><a href="#"><span></span>es6</a><ul><li><a href="../../html/es6/es6.html">es6</a></li><li><a href="../../html/es6/babel.html">babel</a></li></ul></li><li><a href="#"><span></span>git</a><ul><li><a href="../../html/git/Git.html">Git</a></li></ul></li><li><a href="#"><span></span>打包工具</a><ul><li><a href="../../html/打包工具/gulp.html">gulp</a></li><li><a href="../../html/打包工具/webpack.html">webpack</a></li></ul></li><li><a href="#"><span></span>css</a><ul><li><a href="../../html/css/Flex.html">Flex</a></li></ul></li><li><a href="#"><span></span>框架</a><ul><li><a href="../../html/框架/vue.html">vue</a></li><li class="active"><a href="../../html/框架/jQuery.html">jQuery</a></li></ul></li></ul></div>
+    
+</div>
 
 
-<div class="warpper">
+
+
+<div class="container">
 
     <div class="page-toc">
         <ul><li><a href="#t0JQuery">JQuery</a><ul><li><a href="#t1语法">语法</a></li><li><a href="#t2选择器">选择器</a><ul><li><a href="#t3元素选择器">元素选择器</a></li><li><a href="#t4#id选择器">#id选择器</a></li><li><a href="#t5.class选择器">.class选择器</a></li></ul></li><li><a href="#t6事件">事件</a></li></ul></li><li><a href="#t7jquery效果">jquery效果</a><ul><li><a href="#t8显示和隐藏       (可以指定时间)">显示和隐藏       (可以指定时间)</a></li><li><a href="#t9淡入淡出        (可以指定时间)">淡入淡出        (可以指定时间)</a></li><li><a href="#t10滑动       (可以指定时间)">滑动       (可以指定时间)</a></li><li><a href="#t11动画">动画</a><ul><li><a href="#t12jQuery animate() - 操作多个属性">jQuery animate() - 操作多个属性</a></li></ul></li><li><a href="#t13停止动画">停止动画</a></li><li><a href="#t14callback">callback</a></li><li><a href="#t15Chaining 链式写法">Chaining 链式写法</a></li><li><a href="#t16jq的捕获">jq的捕获</a><ul><li><a href="#t17获得内容 - text()、html() 以及 val()">获得内容 - text()、html() 以及 val()</a></li><li><a href="#t18获取属性 - attr()">获取属性 - attr()</a></li></ul></li><li><a href="#t19设置内容和属性">设置内容和属性</a></li><li><a href="#t20jQuery attr() 方法也用于设置/改变属性值。">jQuery attr() 方法也用于设置/改变属性值。</a></li><li><a href="#t21添加新的 HTML 内容">添加新的 HTML 内容</a></li><li><a href="#t22删除元素/内容">删除元素/内容</a></li><li><a href="#t23jQuery css() 方法">jQuery css() 方法</a></li><li><a href="#t24尺寸">尺寸</a></li><li><a href="#t25   http://www.runoob.com/jquery/jquery-dimensions.html">   http://www.runoob.com/jquery/jquery-dimensions.html</a></li><li><a href="#t26遍历祖先">遍历祖先</a></li><li><a href="#t27向下遍历 DOM 树">向下遍历 DOM 树</a></li><li><a href="#t28有许多有用的方法让我们在 DOM 树进行水平遍历：">有许多有用的方法让我们在 DOM 树进行水平遍历：</a></li><li><a href="#t29过滤">过滤</a></li></ul></li></ul>
@@ -216,9 +232,31 @@ parentsUntil()&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x4ECB;&#x4E8E;&#x4E24;&#x4E2A;&#
 </code></pre>
         <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
     </div>
-    
+
 </div>
 
 
 </body>
+<script src="http://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+<script>
+    $('.page-toc li').eq(0).children('a').addClass('red');
+    var arr = [];
+    $("h2,h3").each(function () {
+        $(this).attr('t',$(this).position().top);
+        arr.push($(this).position().top);
+    });
+    $(window).on('scroll', function () {
+        var cur = $(document).scrollTop();
+        for(var i = arr.length; i >=0;i--){
+            if(arr[i]<=cur){
+                break;
+            }
+        }
+        if(i===-1){
+            i = 0;
+        }
+        $('.page-toc li a').removeClass('red');
+        $('.page-toc li').eq(i).children('a').addClass('red')
+    });
+</script>
 </html>

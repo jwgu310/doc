@@ -4,19 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>顾佳伟</title>
+        
     <link rel="stylesheet" type="text/css" href="../../static/css/main.css">
 </head>
 <body>
-<div class="nav">
-    <div class="logo">
+<div class="navbar navbar-line">
+    <div class="container">
+        <div class="logo">
+            
+                顾佳伟
+            
+        </div>
+        <input type="checkbox" id="idoc_nav" />
+        <div class="menu_tree">
+        <ul><li><a href="../../index.html">index</a></li><li><a href="#"><span></span>es6</a><ul><li><a href="../../html/es6/es6.html">es6</a></li><li><a href="../../html/es6/babel.html">babel</a></li></ul></li><li><a href="#"><span></span>git</a><ul><li class="active"><a href="../../html/git/Git.html">Git</a></li></ul></li><li><a href="#"><span></span>打包工具</a><ul><li><a href="../../html/打包工具/gulp.html">gulp</a></li><li><a href="../../html/打包工具/webpack.html">webpack</a></li></ul></li><li><a href="#"><span></span>css</a><ul><li><a href="../../html/css/Flex.html">Flex</a></li></ul></li><li><a href="#"><span></span>框架</a><ul><li><a href="../../html/框架/vue.html">vue</a></li><li><a href="../../html/框架/jQuery.html">jQuery</a></li></ul></li></ul>    
+        </div>
         
-            顾佳伟
         
+
+        <section class="idoc_nav_btn">
+            <label for="idoc_nav"><span></span></label>
+        </section>
     </div>
-<ul><li><a href="../../index.html">index</a></li><li><a href="#"><span></span>es6</a><ul><li><a href="../../html/es6/es6.html">es6</a></li><li><a href="../../html/es6/babel.html">babel</a></li></ul></li><li><a href="#"><span></span>git</a><ul><li class="active"><a href="../../html/git/Git.html">Git</a></li></ul></li><li><a href="#"><span></span>打包工具</a><ul><li><a href="../../html/打包工具/gulp.html">gulp</a></li><li><a href="../../html/打包工具/webpack.html">webpack</a></li></ul></li><li><a href="#"><span></span>css</a><ul><li><a href="../../html/css/Flex.html">Flex</a></li></ul></li><li><a href="#"><span></span>框架</a><ul><li><a href="../../html/框架/vue.html">vue</a></li><li><a href="../../html/框架/jQuery.html">jQuery</a></li></ul></li></ul></div>
+    
+</div>
 
 
-<div class="warpper">
+
+
+<div class="container">
 
     <div class="page-toc">
         <ul><li><a href="#t0Git的使用">Git的使用</a><ul><li><a href="#t1配置使用人的账号和邮箱">配置使用人的账号和邮箱</a></li><li><a href="#t2初始化git">初始化git</a></li><li><a href="#t3初始化文件">初始化文件</a></li><li><a href="#t4删除文件rm">删除文件rm</a></li><li><a href="#t5查看状态  git status">查看状态  git status</a></li><li><a href="#t6将文件加入到暂存区中">将文件加入到暂存区中</a></li><li><a href="#t7提交commit">提交commit</a></li><li><a href="#t8vi控制台">vi控制台</a></li><li><a href="#t9查看版本库信息">查看版本库信息</a></li><li><a href="#t10比较代码差异">比较代码差异</a></li><li><a href="#t11从暂存区删除本次的add">从暂存区删除本次的add</a></li><li><a href="#t12从缓存区 从历史区将代码覆盖掉工作区">从缓存区 从历史区将代码覆盖掉工作区</a></li><li><a href="#t13回到过去">回到过去</a></li><li><a href="#t14分支">分支</a></li><li><a href="#t15在github上部署静态页">在github上部署静态页</a></li><li><a href="#t16合并分支产生冲突">合并分支产生冲突</a></li><li><a href="#t17从工作区中提交到历史区">从工作区中提交到历史区</a></li><li><a href="#t18解决冲突">解决冲突</a></li><li><a href="#t19合并">合并</a></li><li><a href="#t20显示结构">显示结构</a></li><li><a href="#t21创建忽略文件">创建忽略文件</a></li><li><a href="#t22添加远程仓库的连接">添加远程仓库的连接</a></li><li><a href="#t23查看配置的所有配置的地址">查看配置的所有配置的地址</a></li><li><a href="#t24删除地址">删除地址</a></li><li><a href="#t25upstream">upstream</a></li></ul></li></ul>
@@ -126,9 +142,31 @@ git cherry-pick &#x7CBE;&#x9009;</p>
 </code></pre>
         <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
     </div>
-    
+
 </div>
 
 
 </body>
+<script src="http://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+<script>
+    $('.page-toc li').eq(0).children('a').addClass('red');
+    var arr = [];
+    $("h2,h3").each(function () {
+        $(this).attr('t',$(this).position().top);
+        arr.push($(this).position().top);
+    });
+    $(window).on('scroll', function () {
+        var cur = $(document).scrollTop();
+        for(var i = arr.length; i >=0;i--){
+            if(arr[i]<=cur){
+                break;
+            }
+        }
+        if(i===-1){
+            i = 0;
+        }
+        $('.page-toc li a').removeClass('red');
+        $('.page-toc li').eq(i).children('a').addClass('red')
+    });
+</script>
 </html>

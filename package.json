@@ -13,7 +13,7 @@
     },
     "licenses": "MIT",
     "idoc": {
-        "theme": "default",
+        "theme": "doc",
         "md": [
             "index.md",
             {
